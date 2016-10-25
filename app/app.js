@@ -16,6 +16,8 @@ App = Ember.Application.extend({
     emberAdmin: {
       dependencies: {
         services: [
+          'store',
+          'admin-store',
           'admin-config'
         ]
       }
