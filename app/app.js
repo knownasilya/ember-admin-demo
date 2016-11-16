@@ -21,6 +21,13 @@ App = Ember.Application.extend({
           'admin-config'
         ]
       }
+    },
+    emberAdminBootstrap: {
+      dependencies: {
+        services: [
+          'admin-config'
+        ]
+      }
     }
   }
 });

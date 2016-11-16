@@ -1,4 +1,6 @@
 {{link-to 'Admin' 'admin'}}
 {{override-area 'modelList' 'post' send=(component 'test-me')}}
-{{admin-theme-manager theme='ember-admin-bootstrap' adminConfig=adminConfig}}
+{{#admin-theme-manager theme='ember-admin-bootstrap' adminConfig=adminConfig}}
+  {{mount 'ember-admin-bootstrap'}}
+{{/admin-theme-manager}}
 {{outlet}}
