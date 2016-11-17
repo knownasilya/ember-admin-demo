@@ -25,4 +25,7 @@ export default function() {
   */
   this.get('/admin/posts');
   this.post('/admin/posts');
+  this.get('/admin/posts/:id');
+  this.put('/admin/posts/:id');
+  this.delete('/admin/posts/:id');
 }
