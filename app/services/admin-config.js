@@ -26,6 +26,10 @@ export default Ember.Service.extend({
     let component = owner.lookup(`component:${componentName}`);
 
     return component;
+  },
+
+  notifyRenderArea(areasPath) {
+    this.notifyPropertyChange('areas');
   }
 });
 

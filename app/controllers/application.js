@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
   actions: {
     changeTheme(theme) {
       this.setProperties({
-        selectedtheme: theme,
+        selectedTheme: theme,
         'adminConfig.activeTheme': theme
       });
     }
