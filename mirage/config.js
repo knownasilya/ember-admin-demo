@@ -23,13 +23,5 @@ export default function() {
 
     http://www.ember-cli-mirage.com/docs/v0.2.x/shorthands/
   */
-  this.get('/admin/posts', () => {
-    return { data: [
-      {
-        id: 1,
-        type: 'post',
-        attributes: { name: 'test' }
-      }
-    ] };
-  });
+  this.get('/admin/posts');
 }
