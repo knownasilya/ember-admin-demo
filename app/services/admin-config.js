@@ -7,6 +7,7 @@ export default Ember.Service.extend({
     let owner = getOwner(this);
     this.set('dataAdapter', owner.lookup('data-adapter:main'));
     this.set('areas', Ember.Object.create());
+    this.set('adminRoute', 'admin');
   },
 
   lookupArea(area, modelType) {

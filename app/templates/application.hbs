@@ -1,5 +1,16 @@
 {{link-to 'Admin' 'admin'}}
-{{#admin-theme-manager theme='bootstrap' adminConfig=adminConfig as |theme|}}
+
+<select onchange={{action 'changeTheme' value='target.value'}}>
+  {{#each themes as |theme|}}
+    {{#if (eq selectedTheme theme)}}
+      <option selected="selected">{{theme}}</option>
+    {{else}}
+      <option>{{theme}}</option>
+    {{/if}}
+  {{/each}}
+</select>
+
+{{#admin-theme-manager theme=selectedTheme adminConfig=adminConfig as |theme|}}
   {{#if (eq theme 'bootstrap')}}
     {{mount 'ember-admin-bootstrap'}}
   {{/if}}
